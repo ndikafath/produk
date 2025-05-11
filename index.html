@@ -37,6 +37,7 @@
         
         .container {
             max-width: 1200px;
+            font-size: 20px;
             margin: 0 auto;
             padding: 20px;
             position: relative;
@@ -167,15 +168,35 @@ document.body.addEventListener('click', function () {
 });
 </script>
 </div>
-    
-    
-    <div class="container">
+ <script>
+  function updateClock() {
+    const now = new Date();
+    const hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+    const namaHari = hari[now.getDay()];
+    const tanggal = now.getDate();
+    const namaBulan = bulan[now.getMonth()];
+    const tahun = now.getFullYear();
+
+    const jam = now.getHours().toString().padStart(2, '0');
+    const menit = now.getMinutes().toString().padStart(2, '0');
+    const detik = now.getSeconds().toString().padStart(2, '0');
+
+    const waktuLengkap = `${namaHari}, ${tanggal} ${namaBulan} ${tahun} – ${jam}:${menit}:${detik}`;
+    document.getElementById('realtime-clock').textContent = waktuLengkap;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+     <div class="container">
         <header>
             <h1>Hello!! I'Am NdikaFath ID</h1>
             <p>Welcome To My Product Website</p>
             <p>NdikaFath ID Menyediakan Berbagai Kebutuhan Hosting Seperti Vps, Panel Pterodactyl, Bot WhatsApp, Dll</p>
         </header>
-        
+    <div id="realtime-clock" style="text-align: center; font-size: 20px; font-weight: bold; color: white; margin: 15px 0;"></div>
         <section class="section">
             <h2>VPS Digital Ocean High Quality</h2>
             <ul class="product-list">
@@ -245,29 +266,49 @@ document.body.addEventListener('click', function () {
                 <li class="bonus-item">Harga/Price : Rp15.000</li>
             </ul>
         </section>
-        
         <section class="section">
             <h2>Open Kebutuhan Panel Pterodactyl</h2>
+         <ul class="bonus-list">
+                <li class="bonus-item">Reseller Panel Private :</li>
+                </ul>
             <ul class="product-list">
-                <li class="product-item">Reseller Panel Private : Rp5.000</li>
-                <li class="product-item">Own Reseller Panel Private : Rp10.000</li>
-                <li class="product-item">Admin Panel : Rp10.000</li>
-                <li class="product-item">Partner Panel : Rp15.000</li>
-                <li class="product-item">Owner Panel : Rp20.000</li>
-                <li class="product-item">Tangan Kanan Panel : Rp25.000</li>
+                <li class="product-item">1 Bulan : Rp3.000</li>
+                <li class="product-item">Permanen : Rp5.000</li>
+                </ul>
+               <ul class="bonus-list">
+                <li class="bonus-item">Own Reseller Panel Private :</li>
+                </ul>
+            <ul class="product-list">
+                <li class="product-item">1 Bulan : Rp7.000</li>
+                <li class="product-item">Permanen : Rp10.000</li>
             </ul>
-            
-            <h3>Bonus Pembelian :</h3>
             <ul class="bonus-list">
-                <li class="bonus-item">Spesifikasi Ram 16gb Core 4</li>
-                <li class="bonus-item">Panel Anti Delay</li>
-                <li class="bonus-item">Server Panel Terjaga Ketat</li>
-                <li class="bonus-item">Terjamin Awet 100%</li>
-                <li class="bonus-item">Tidak Ada Patungan/PT PT</li>
-                <li class="bonus-item">Semuanya Permanen</li>
-                <li class="bonus-item">Server High Quality & Fresh</li>
-                <li class="bonus-item">Akses Ke 2 Server (Own Dan Tangan Kanan)</li>
-                <li class="bonus-item">Free Admin Di Grup Ke-2 (Tangan Kanan)</li>
+                <li class="bonus-item">Admin Panel :</li>
+                </ul>
+            <ul class="product-list">
+                <li class="product-item">1 Bulan : Rp5.000</li>
+                <li class="product-item">Permanen : Rp10.000</li>
+            </ul>
+            <ul class="bonus-list">
+                <li class="bonus-item">Partner Panel :</li>
+                </ul>
+            <ul class="product-list">
+                <li class="product-item">1 Bulan : Rp10.000</li>
+                <li class="product-item">Permanen : Rp15.000</li>
+            </ul>
+            <ul class="bonus-list">
+                <li class="bonus-item">Owner Panel :</li>
+                </ul>
+            <ul class="product-list">
+                <li class="product-item">1 Bulan : Rp15.000</li>
+                <li class="product-item">Permanen : Rp20.000</li>
+            </ul>
+            <ul class="bonus-list">
+                <li class="bonus-item">Tangan Kanan Panel :</li>
+                </ul>
+            <ul class="product-list">
+                <li class="product-item">1 Bulan : Rp20.000</li>
+                <li class="product-item">Permanen : Rp25.000</li>
             </ul>
         </section>
     
@@ -280,9 +321,9 @@ document.body.addEventListener('click', function () {
         
        <div class="contact">
             <h3>Grup Marketplace Dan Channel Testimoni NdikaFath ID</h3>
-              <a href="https://chat.whatsapp.com/EQpPKP9uiQiDvhDhza2ABK" class="whatsapp">Grup WhatsApp #1 NdikaFath ID</a>
-            <a href="https://chat.whatsapp.com/JTJl1rUQLEPE2qgRwXsCja" class="whatsapp">Grup WhatsApp #2 NdikaFath ID</a>
+              <a href="https://chat.whatsapp.com/EQpPKP9uiQiDvhDhza2ABK" class="whatsapp">Grup NdikaFath ID Marketplace</a>
             <a href="https://whatsapp.com/channel/0029VbAX1FL3wtb09wA9ZM2Z" class="whatsapp">Channel Testimoni NdikaFath ID</a>
         </div>
+       
 </body>
 </html>
