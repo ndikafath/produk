@@ -1,315 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="NdikaFath ID - Layanan Hosting & Bot WhatsApp">
-<meta property="og:description" content="Layanan hosting murah, VPS, Panel Pterodactyl, dan Bot WhatsApp.">
-<meta property="og:url" content="https://ndikafath.store">
-<meta property="og:type" content="website">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #0a0a1a;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        
-        .video-background video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-            margin-bottom: 30px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #4fc3f7;
-            text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
-        }
-        
-        .section {
-            background-color: rgba(10, 10, 30, 0.8);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid #4fc3f7;
-            box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
-        }
-        
-        h2 {
-            color: #4fc3f7;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            border-bottom: 1px solid #4fc3f7;
-            padding-bottom: 10px;
-        }
-        
-        .product-list {
-            list-style-type: none;
-        }
-        
-        .product-item {
-            padding: 15px;
-            margin-bottom: 10px;
-            background-color: rgba(20, 20, 50, 0.6);
-            border-radius: 5px;
-            border-left: 3px solid #4fc3f7;
-            transition: all 0.3s ease;
-        }
-        
-        .product-item:hover {
-            background-color: rgba(30, 30, 70, 0.8);
-            transform: translateX(5px);
-        }
-        
-        .bonus-list {
-            margin-top: 20px;
-            padding-left: 20px;
-        }
-        
-        .bonus-item {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .bonus-item::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #4fc3f7;
-        }
-        
-        .contact {
-            text-align: center;
-            padding: 30px;
-            background-color: rgba(10, 10, 30, 0.9);
-            margin-top: 40px;
-            border-radius: 10px;
-            border: 1px solid #4fc3f7;
-        }
-        
-        .contact h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #4fc3f7;
-        }
-        
-        .whatsapp {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        
-        .whatsapp:hover {
-            background-color: #128C7E;
-        }
-       @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .section {
-                padding: 15px;
-            }
-        }
-    </style>
+<html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kennzy</title>
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --card-color: rgba(40, 40, 40, 0.7);
+      --text-color: #e5e5e5;
+      --subtext-color: #a3a3a3;
+      --button-color: #444;
+      --button-hover: #606060;
+      --gray-bar: #999;
+    }
 
-<!-- Favicon dan Metadata Logo -->
-<link rel="icon" href="https://img1.pixhost.to/images/5137/589492020_skyzopedia.jpg" type="image/jpeg">
-<meta property="og:image" content="https://img1.pixhost.to/images/5137/589492020_skyzopedia.jpg">
-<meta name="theme-color" content="#0a0a1a">
-<link rel="apple-touch-icon" href="https://img1.pixhost.to/images/5137/589492020_skyzopedia.jpg">
+    [data-theme="light"] {
+      --bg-color: #f4f4f4;
+      --card-color: #ffffffcc;
+      --text-color: #1a1a1a;
+      --subtext-color: #444;
+      --button-color: #e0e0e0;
+      --button-hover: #cfcfcf;
+      --gray-bar: #888;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .container {
+      background: var(--card-color);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 480px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img.profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gray-bar);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 5px;
+    }
+
+    p.role {
+      color: var(--subtext-color);
+      margin-bottom: 10px;
+    }
+
+    .typing-text {
+      font-size: 13px;
+      color: var(--subtext-color);
+      height: 18px;
+      margin-bottom: 20px;
+    }
+
+    .bio-link {
+      background: var(--button-color);
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 12px;
+      color: var(--text-color);
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .bio-link:hover {
+      background: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    .music-btn {
+      margin: 20px auto 10px;
+      background: var(--button-color);
+      color: var(--text-color);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .time {
+      font-size: 13px;
+      margin-top: 10px;
+      color: var(--subtext-color);
+    }
+
+    .toggle-theme {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: var(--subtext-color);
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: var(--subtext-color);
+    }
+  </style>
 </head>
-<body>
-    <div class="video-background">
-      <video id="myVideo" autoplay muted loop>
-  <source src="https://files.catbox.moe/s88o6p.mp4" type="video/mp4">
-</video>
+<body data-theme="dark">
 
-<script>
-document.body.addEventListener('click', function () {
-  const video = document.getElementById('myVideo');
-  video.muted = false;
-  video.play();
-});
-</script>
-</div>
- <script>
-  function updateClock() {
-    const now = new Date();
-    const hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-    const bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  <div class="container">
+    <button class="toggle-theme" onclick="toggleTheme()">🌗</button>
 
-    const namaHari = hari[now.getDay()];
-    const tanggal = now.getDate();
-    const namaBulan = bulan[now.getMonth()];
-    const tahun = now.getFullYear();
+    <img src="https://img1.pixhost.to/images/5137/589492020_skyzopedia.jpg" alt="Foto Profil" class="profile">
+    <h1>NdikaFath ID </h1>
+    <div class="typing-text" id="typing">Halo everyone, </div>
 
-    const jam = now.getHours().toString().padStart(2, '0');
-    const menit = now.getMinutes().toString().padStart(2, '0');
-    const detik = now.getSeconds().toString().padStart(2, '0');
+    <a class="bio-link" href="https://wa.me/6289508141350" target="_blank"> WhatsApp</a>
+    <a class="bio-link" href="https://chat.whatsapp.com/KFClR10VSqQ4nYZjIOJMCB?mode=r_c" target="_blank"> Grup Marketplace #1</a>
+    <a class="bio-link" href="https://chat.whatsapp.com/HQdETLCTs0R8Mq2rhQ4qPR?mode=r_c" target="_blank"> Grup Marketplace #2</a>
+    <a class="bio-link" href="https://whatsapp.com/channel/0029Vb64Dzn1dAw9KL0Mw604" target="_blank"> Channel Official</a>
+    <a class="bio-link" href="https://whatsapp.com/channel/0029Vb5cXEDI7BeHTDW5iO0c" target="_blank"> Channel Testimoni</a>
 
-    const waktuLengkap = `${namaHari}, ${tanggal} ${namaBulan} ${tahun} – ${jam}:${menit}:${detik}`;
-    document.getElementById('realtime-clock').textContent = waktuLengkap;
-  }
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+    <div class="time" id="time">10.09.03</div>
 
-  setInterval(updateClock, 1000);
-  updateClock();
-</script>
-     <div class="container">
-        <header>
-            <h1>Hello!! I'Am NdikaFath ID</h1>
-            <p>Welcome To My Product Website</p>
-            <p>NdikaFath ID Menyediakan Berbagai Kebutuhan Hosting Seperti Vps, Panel Pterodactyl, Bot WhatsApp, Dll</p>
-        </header>
-    <div id="realtime-clock" style="text-align: center; font-size: 20px; font-weight: bold; color: white; margin: 15px 0;"></div>
-        <section class="section">
-            <h2>VPS Digital Ocean High Quality</h2>
-            <ul class="product-list">
-                <li class="product-item">Ram 2Gb Core 2 : Rp20.000</li>
-                <li class="product-item">Ram 4Gb Core 2 : Rp25.000</li>
-                <li class="product-item">Ram 8Gb Core 2 : Rp30.000</li>
-                <li class="product-item">Ram 8Gb Core 4 : Rp35.000</li>
-                <li class="product-item">Ram 16Gb Core 4 : Rp40.000</li>
-            </ul>
-            
-            <h3>Bonus Pembelian :</h3>
-            <ul class="bonus-list">
-                <li class="bonus-item">Free Install Panel Pterodactyl</li>
-                <li class="bonus-item">Free Request Domain Panel</li>
-                <li class="bonus-item">Free Install Node/Wings</li>
-                <li class="bonus-item">Free Pasang Egg Bot Wa</li>
-                <li class="bonus-item">Masa Aktif 1 Bulan (30 Day)</li>
-                <li class="bonus-item">Garansi On 15 Day (1x Replace)</li>
-            </ul>
-        </section>
-        <section class="section">
-            <h2>Panel Pterodactyl Server Private [Ram Unli Only]</h2>
-            <ul class="product-list">
-                <li class="product-item">1 Bulan : Rp2.000</li>
-                </ul>      
-                <h3>Note :</h3>
-                <ul class="bonus-list">
-                <li class="bonus-item">Panel Khusus Running Bot WhatsApp</li>
-                <li class="bonus-item">Garansi Aktif 20 Hari (Unlimited Replace)</li>
-                <li class="bonus-item">Free Script Bot Push Kontak</li>
-                </ul>
-                 </section>
-                 <section class="section">
-                     <h2>Bot Push Kontak / Jaga Grup [Jadi Bot]</h2>
-                     <ul class="product-list">
-                 <li class="product-item">1 Minggu = Rp2.000</li>
-                 <li class="product-item">2 Minggu = Rp4.000</li>
-                 <li class="product-item">1 Bulan = Rp5.000</li>
-                 <li class="product-item">Permanen = Rp7.000</li>
-                     </ul>
-                 </section>
-        <section class="section">
-            <h2>Jasa/Layanan Lainnya</h2>
-            <ul class="product-list">
-                <li class="product-item">Jasa Rename Script : Rp5.000 - Rp15.000</li>
-                <li class="product-item">Jasa Install Panel Pterodactyl : Rp5.000</li>
-              </ul>
-        </section>
-        
-        <section class="section">
-            <h2>Open Kebutuhan Panel Pterodactyl</h2>
-         <ul class="bonus-list">
-                <li class="bonus-item">Reseller Panel Private</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">Permanen : Rp7.000</li>
-                </ul>
-                <li class="bonus-item">Own Reseller Panel Private</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">Permanen : Rp12.000</li>
-                </ul>
-            <ul class="bonus-list">
-                <li class="bonus-item">Admin Panel :</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">1 Bulan : Rp5.000</li>
-                <li class="product-item">Permanen : Rp10.000</li>
-            </ul>
-            <ul class="bonus-list">
-                <li class="bonus-item">Partner Panel :</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">1 Bulan : Rp10.000</li>
-                <li class="product-item">Permanen : Rp15.000</li>
-            </ul>
-            <ul class="bonus-list">
-                <li class="bonus-item">Owner Panel :</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">1 Bulan : Rp15.000</li>
-                <li class="product-item">Permanen : Rp20.000</li>
-            </ul>
-            <ul class="bonus-list">
-                <li class="bonus-item">Tangan Kanan Panel :</li>
-                </ul>
-            <ul class="product-list">
-                <li class="product-item">1 Bulan : Rp20.000</li>
-                <li class="product-item">Permanen : Rp25.000</li>
-            </ul>
-        </section>
-    
-        
-        <div class="contact">
-            <h3>Hubungi Penjual Jika Berminat</h3>
-            <p>Jika Anda Kurang Paham Bisa Tanyakan Saja</p>
-            <a href="https://wa.me/6289508141350" class="whatsapp">WhatsApp NdikaFath ID</a>
-        </div>
-        
-       <div class="contact">
-            <h3>All Channel NdikaFath ID</h3>
-              <a href="https://whatsapp.com/channel/0029Vb64Dzn1dAw9KL0Mw604" class="whatsapp">Channel NdikaFath ID Official</a>
-            <a href="https://whatsapp.com/channel/0029Vb5cXEDI7BeHTDW5iO0c" class="whatsapp">Channel Testimoni NdikaFath ID</a>
-        </div>
-       
-</body>
-</html>
+    <footer>© 2025 NdikaFath ID • All rights reserved.</footer>
+  </div>
+
+  <audio id="bg-music" loop="">
+    <source src="https://files.catbox.moe/tru8ly.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+    const playBtn = document.querySelector(".music-btn");
+    const typing = document.getElementById("typing");
+    const texts = [
+      "Halo everyone, I'm NdikaFath ID age: 16 years...",
+      "Butuh vps/bot/panel? Langsung chat aja",
+      "Jasa install panel & dll, info selengkapnya follow my ch."
+    ];
+    let typingIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const current = texts[typingIndex];
+      typing.textContent = current.substring(0, charIndex) + (charIndex % 2 === 0 ? "|" : "");
+      if (!isDeleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(typeEffect, 100);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 50);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) typingIndex = (typingIndex + 1) % texts.length;
+        setTimeout(typeEffect, 1000);
+      }
+    }
+    typeEffect();
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸  ";
+      } else {
+        audio.pause();
+        playBtn.textContent = "🎵";
+      }
+    }
+
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("time").textContent = now.toLocaleTimeString("id-ID");
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      body.setAttribute("data-theme", next);
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) audio.pause();
+    });
+
+    window.addEventListener("beforeunload", () => {
+      audio.pause();
+    });
+  </script>
+
+
+</body></html>
